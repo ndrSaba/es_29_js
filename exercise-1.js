@@ -1,5 +1,7 @@
 function adultFilter(persons) {
-  return persons.age >= 18;
+  return persons.filter(person => {
+    return person.age >= 18;
+  });
 }
 
 const persons = [
@@ -13,7 +15,7 @@ const persons = [
   { name: 'Mark', age: 15 },
   { name: 'Sandra', age: 34 },
   { name: 'Alice', age: 28 }
-].filter(adultFilter);
+]
 
 const adults = adultFilter(persons);
 console.log(persons);
